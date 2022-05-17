@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">巴士告示牌</string>
+    <string name="main_title1">哈囉世界</string>
+    <string name="main_title1_add">修改一下文字</string>
+    <string name="main_title2">這是第一隻測試</string>
+    <string name="main_title2_add">按下文字區塊了</string>
+</resources>
