@@ -25,7 +25,6 @@
             android:textColor="@color/white"
             android:text="@string/main_title2" />
     </LinearLayout>
-<layout
 
     <!--            app:layout_constraintBaseline_toBottomOf="text"-->
     <!--            app:layout_constraintEnd_toEndOf="parent"-->
