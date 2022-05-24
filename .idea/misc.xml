@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../BusInfoDashboard/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1305" />
+        <entry key="../BusInfoDashboard/app/src/main/res/drawable/gradient.xml" value="0.1805" />
         <entry key="../BusInfoDashboard/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="../BusInfoDashboard/app/src/main/res/layout/activity_main.xml" value="0.2578207203184578" />
+        <entry key="../BusInfoDashboard/app/src/main/res/layout/activity_main.xml" value="0.21445465087890633" />
       </map>
     </option>
   </component>
@@ -14,5 +15,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2578207203184578" />
+      </ProjectState>
+    </option>
   </component>
 </project>

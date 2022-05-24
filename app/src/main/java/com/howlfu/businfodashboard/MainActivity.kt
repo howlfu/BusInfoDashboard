@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     private fun initSpeaker() {
         tts = TextToSpeech(applicationContext, TextToSpeech.OnInitListener { status ->
             if (status == TextToSpeech.SUCCESS) {
-                val ttsLang = tts!!.setLanguage(Locale.TAIWAN)
+                val ttsLang = tts!!.setLanguage(Locale.ENGLISH)
                 if (ttsLang == TextToSpeech.LANG_MISSING_DATA || ttsLang == TextToSpeech.LANG_NOT_SUPPORTED) {
                     println( "The Language is not supported!")
                 } else {
@@ -51,18 +51,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun testWhenCreate(){
-        val text1 = findViewById<TextView>(R.id.text1)
-        text1.text = getString(R.string.main_title1_add)
-        text1.setOnClickListener {
-            pressTextViewHandler()
-        }
+//        val text1 = findViewById<TextView>(R.id.text1)
+//        text1.text = getString(R.string.main_title1_add)
+//        text1.setOnClickListener {
+//            pressTextViewHandler()
+//        }
     }
 
     private fun pressTextViewHandler() {
-        val text2 = findViewById<TextView>(R.id.text2)
-        text2.text = getString(R.string.main_title2_add)
-
-        speak("下一站市政府")
+//        val text2 = findViewById<TextView>(R.id.text2)
+//        text2.text = getString(R.string.main_title2_add)
+//
+//        speak("123")
     }
 
     private fun hideSystemUI() {
