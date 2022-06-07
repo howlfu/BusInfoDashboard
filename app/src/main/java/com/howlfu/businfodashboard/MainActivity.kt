@@ -1,17 +1,26 @@
 package com.howlfu.businfodashboard
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import java.util.*
-import android.util.Log
 
 
+class BootUpReceiver : BroadcastReceiver() {
+    override fun onReceive(context: Context, intent: Intent?) {
+        val i = Intent(context, MainActivity::class.java)
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        context.startActivity(i)
+    }
+}
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +28,15 @@ class MainActivity : AppCompatActivity() {
         testWhenCreate()
         hideSystemUI()
         initSpeaker()
+        val uniqueId = getId()
+    }
+
+    private fun getId(): String{
+        val m_szDevIDShort = "35" + //we make this look like a valid IMEI
+                Build.BOARD.length % 10 + Build.BRAND.length % 10 + + Build.DEVICE.length % 10 + Build.DISPLAY.length % 10 + Build.HOST.length % 10 + Build.ID.length % 10 + Build.MANUFACTURER.length % 10 + Build.MODEL.length % 10 + Build.PRODUCT.length % 10 + Build.TAGS.length % 10 + Build.TYPE.length % 10 + Build.USER.length % 10 //13 digits
+
+        return m_szDevIDShort
+
     }
 
     private var tts: TextToSpeech? = null
